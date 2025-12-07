@@ -1,0 +1,112 @@
+/* Moved from styles/employee-schedule.css */
+
+/* Employee schedule specific styles - copied from employee.css */
+
+.employee-schedule-card {
+  max-width: 1120px;
+  margin: 1.5rem auto 2.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: radial-gradient(circle at top left, #bbf7d0 0, #dcfce7 30%, #ffffff 100%);
+  box-shadow: 0 16px 40px rgba(22, 163, 74, 0.18);
+  border: 1px solid rgba(187, 247, 208, 0.9);
+}
+
+.employee-schedule-date-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+  color: #4b5563;
+}
+
+.employee-schedule-date-input {
+  width: 100%;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(209, 213, 219, 1);
+  background-color: #ffffff;
+  color: #111827;
+}
+
+.employee-schedule-date-input:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.25);
+}
+
+.employee-schedule-list {
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.employee-schedule-item {
+  border-radius: 0.9rem;
+  border: 1px solid rgba(209, 213, 219, 0.9);
+  background: linear-gradient(90deg, #f9fafb, #ffffff);
+  padding: 0.9rem 1.1rem;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+.employee-schedule-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.6rem;
+}
+
+.employee-schedule-item-time {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #166534;
+}
+
+.employee-schedule-item-service {
+  margin-top: 0.15rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.employee-schedule-item-status {
+  display: flex;
+  align-items: center;
+}
+
+.employee-schedule-item-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.employee-schedule-item-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.employee-schedule-item-column--wide {
+  min-width: 220px;
+}
+
+.employee-schedule-item-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #6b7280;
+}
+
+.employee-schedule-item-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.employee-schedule-item-subtext {
+  font-size: 0.8rem;
+  color: #4b5563;
+}

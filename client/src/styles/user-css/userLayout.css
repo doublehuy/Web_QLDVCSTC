@@ -1,0 +1,169 @@
+/* Moved from styles/userLayout.css */
+
+@import '../utilities.css';
+
+.user-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #eef2ff 0%, #ffffff 60%, #e0f2fe 100%);
+}
+
+/* --- Toàn bộ phần còn lại giữ nguyên từ styles/userLayout.css --- */
+.user-mobile-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+  box-shadow: 0 6px 20px rgba(148, 163, 184, 0.25);
+}
+
+/* ... (giữ nguyên tất cả rule còn lại từ file userLayout.css gốc) ... */
+
+/* User footer */
+.user-footer {
+  margin-top: auto;
+  padding: 1.75rem 1.5rem 1.25rem;
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.95), rgba(219, 234, 254, 0.98));
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 -8px 24px rgba(148, 163, 184, 0.25);
+}
+
+.user-footer__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr) minmax(0, 2fr);
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.user-footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.user-footer__logo {
+  height: 44px;
+  width: 44px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #4f46e5, #38bdf8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
+}
+
+.user-footer__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.user-footer__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.user-footer__subtitle {
+  font-size: 0.85rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.user-footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #1f2937;
+}
+
+.user-footer__info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-footer__icon {
+  height: 16px;
+  width: 16px;
+  color: #4f46e5;
+}
+
+.user-footer__social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.user-footer__social-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.user-footer__social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.user-footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1d4ed8;
+  background: rgba(239, 246, 255, 0.95);
+  border: 1px solid rgba(191, 219, 254, 0.9);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.user-footer__social-link:hover {
+  background: linear-gradient(120deg, #3b82f6, #6366f1);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 10px 24px rgba(59, 130, 246, 0.35);
+  transform: translateY(-1px);
+}
+
+.user-footer__social-icon {
+  height: 16px;
+  width: 16px;
+}
+
+.user-footer__bottom {
+  margin-top: 1.25rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+@media (max-width: 1024px) {
+  .user-footer__inner {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .user-footer {
+    padding: 1.25rem 1rem 1rem;
+  }
+
+  .user-footer__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+}

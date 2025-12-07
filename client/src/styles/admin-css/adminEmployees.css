@@ -1,0 +1,177 @@
+/* Moved from styles/adminEmployees.css */
+
+/* Admin Employees Page Styles */
+
+.admin-employees-page {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #fff7ed 0%, #fffbeb 50%, #fefce8 100%);
+  min-height: 100vh;
+}
+
+.admin-employees-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.admin-employees-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: 0.03em;
+}
+
+.admin-employees-add-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  background: linear-gradient(135deg, #fb923c, #ea580c);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(248, 171, 94, 0.55);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.admin-employees-add-btn:hover {
+  background: linear-gradient(135deg, #ea580c, #c2410c);
+  box-shadow: 0 14px 30px rgba(248, 171, 94, 0.75);
+  transform: translateY(-1px);
+}
+
+.admin-employees-add-btn-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.admin-employees-card {
+  color: black;
+  position: relative;
+  background: linear-gradient(135deg, #eef2ff 0%, #ffffff 40%, #f5f3ff 100%);
+  border-radius: 0.75rem;
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.18),
+    0 0 0 1px rgba(148, 163, 184, 0.35);
+  overflow: hidden;
+  border: 1px solid rgba(199, 210, 254, 0.9);
+}
+
+.admin-employees-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at top left, rgba(129, 140, 248, 0.18), transparent 55%),
+              radial-gradient(circle at bottom right, rgba(244, 114, 182, 0.12), transparent 55%);
+  opacity: 0.9;
+}
+
+.admin-employees-card-header {
+  position: relative;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(209, 213, 219, 0.9);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.admin-employees-search-wrapper {
+  position: relative;
+  max-width: 24rem;
+}
+
+.admin-employees-search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  color: #9ca3af;
+}
+
+.admin-employees-search-input {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid #d1d5db;
+  font-size: 0.875rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.admin-employees-search-input::placeholder {
+  color: #9ca3af;
+}
+
+.admin-employees-search-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(129, 140, 248, 0.35);
+  background-color: #ffffff;
+}
+
+/* Bảng nhân viên */
+.admin-employees-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.9rem;
+}
+
+.admin-employees-table-head {
+  background: linear-gradient(90deg, #eef2ff 0%, #e0f2fe 45%, #f5f3ff 100%);
+}
+
+.admin-employees-table-head th {
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6b7280;
+  border-bottom: 1px solid rgba(209, 213, 219, 0.9);
+}
+
+.admin-employees-table-head th:first-child {
+  border-top-left-radius: 0.75rem;
+}
+
+.admin-employees-table-head th:last-child {
+  border-top-right-radius: 0.75rem;
+}
+
+.admin-employees-table-body {
+  background-color: rgba(255, 255, 255, 0.96);
+}
+
+.admin-employees-table-row {
+  transition: background-color 0.18s ease, transform 0.1s ease, box-shadow 0.18s ease;
+}
+
+.admin-employees-table-row:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.admin-employees-table-row:hover {
+  background-color: #eef2ff;
+  box-shadow: 0 4px 12px rgba(148, 163, 184, 0.35);
+}
+
+.admin-employees-table td {
+  padding: 0.9rem 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.admin-employees-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 0.75rem;
+}
+
+.admin-employees-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 0.75rem;
+}

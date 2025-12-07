@@ -1,0 +1,39 @@
+1.	Tên đề tài: Quản lý dịch vụ chăm sóc thú cưng
+2.	Mô tả đề tài: Đề tài nhằm xây dựng một ứng dụng web hỗ trợ quản lý dịch vụ chăm sóc thú cưng, bao gồm quản lý khách hàng, thú cưng và các dịch vụ như khám bệnh, tiêm phòng, spa, gửi thú cưng. Người dùng có thể đăng ký/đăng nhập, đặt lịch hẹn, theo dõi lịch sử dịch vụ và nhận thông báo. Quản trị viên có thể quản lý khách hàng, dịch vụ, lịch hẹn, hóa đơn và doanh thu. Hệ thống được phát triển từ đầu với bộ công nghệ PERN stack (PostgreSQL, ExpressJS, ReactJS, Node.js), đảm bảo hiện đại, dễ bảo trì và có khả năng mở rộng trong tương lai. 
+   Xây dựng hệ thống quản lý dịch vụ chăm sóc thú cưng nhằm hỗ trợ các cửa hàng thú cưng quản lý thông tin khách hàng và thú cưng, đặt lịch hẹn dịch vụ (khám bệnh, tiêm phòng, spa, gửi thú,…), quản lý lịch sử chăm sóc, hóa đơn và doanh thu. Hệ thống giúp tự động hóa quá trình quản lý, giảm sai sót, nâng cao trải nghiệm khách hàng, đồng thời tạo nền tảng số hóa hiện đại thay thế việc quản lý thủ công.
+Các công nghệ sẽ sử dụng:
+- Backend: Node.js (ExpressJS)
+- Frontend: ReactJS
+- Cơ sở dữ liệu: PostgreSQL
+- Công cụ hỗ trợ: Git, Postman, VS Code:
+-	Backend: Node.js
+-	Frontend: ReactJS 
+-	Cơ sở dữ liệu: PostgreSQL
+Các chức năng chính sẽ làm:
+• Người dùng (chủ thú cưng):
+  o Đăng ký/đăng nhập tài khoản.
+  o Quản lý thông tin thú cưng.
+  o Đặt lịch hẹn dịch vụ (khám, spa, tiêm phòng...).
+  o Xem lịch sử dịch vụ và hóa đơn.
+  o Nhận thông báo nhắc lịch.
+• Quản trị viên (admin/nhân viên):
+  o Quản lý khách hàng, thú cưng, dịch vụ.
+  o Quản lý lịch hẹn (duyệt, chỉnh sửa, hủy).
+  o Quản lý hóa đơn, doanh thu.
+  o Thống kê dịch vụ theo mức độ sử dụng.
+•	Người dùng (chủ thú cưng):
+o	Đăng ký / đăng nhập tài khoản.
+o	Quản lý thông tin thú cưng.
+o	Đặt lịch hẹn dịch vụ (khám, spa, tiêm phòng…).
+o	Xem lịch sử dịch vụ và hóa đơn.
+•	Admin:
+o	Quản lý (duyệt, chỉnh sửa, xóa) các phản ánh.
+o	Quản lý danh sách dịch vụ.
+o	Quản lý lịch hẹn (duyệt, chỉnh sửa, hủy).
+o	Quản lý hóa đơn, doanh thu.
+•	Chức năng nâng cao :
+o	Thống kê dịch vụ theo mức độ sử dụng.
+o	Gửi thông báo nhắc lịch hẹn.
+o	Báo cáo doanh thu theo thời gian.
+Đề tài xây dựng từ đầu
+

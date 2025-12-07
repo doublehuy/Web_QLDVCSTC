@@ -1,0 +1,363 @@
+/* Moved from styles/user-services.css */
+
+@import '../utilities.css';
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.no-services {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+.no-services-icon {
+  margin-bottom: 1rem;
+}
+
+.no-services-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.no-services-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.service-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-header-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-header-card.medical {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+}
+
+.service-header-card.spa {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.service-header-card.boarding {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.service-header-card.training {
+  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.service-header-card.care {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+}
+
+.service-header-card.medical .service-icon-container,
+.service-header-card.spa .service-icon-container,
+.service-header-card.boarding .service-icon-container,
+.service-header-card.training .service-icon-container,
+.service-header-card.care .service-icon-container {
+  color: white;
+}
+
+.service-header-card.spa .service-icon-container,
+.service-header-card.boarding .service-icon-container {
+  color: #2d3748;
+}
+
+.service-header-card.spa .service-badge,
+.service-header-card.boarding .service-badge {
+  color: #667eea;
+}
+
+.service-header-card.medical .service-badge,
+.service-header-card.training .service-badge,
+.service-header-card.care .service-badge {
+  color: white;
+}
+
+.service-content {
+  padding: 1.5rem;
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.service-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+  flex: 1;
+}
+
+.service-category-name {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.service-description {
+  color: #718096;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.service-features {
+  margin-bottom: 1.5rem;
+}
+
+.features-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.75rem;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.service-footer {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+}
+
+.service-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.service-detail {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+.service-rating {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.rating-stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+
+.rating-score {
+  font-weight: 600;
+  color: #2d3748;
+  margin-left: 0.25rem;
+}
+
+.rating-count {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.booking-modal .modal-content {
+  max-width: 500px;
+  width: 100%;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.booking-service-info {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.booking-service-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
+
+.booking-service-description {
+  color: #718096;
+  font-size: 0.9rem;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.4;
+}
+
+.booking-service-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-price {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
+
+.booking-duration {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.booking-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.booking-form .form-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.booking-summary {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+.booking-summary h4 {
+  margin: 0 0 0.75rem 0;
+  color: #000000;
+  font-size: 1rem;
+}
+
+.booking-summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #000000;
+}
+
+.booking-summary-item.total {
+  border-top: 1px solid #0d52ad97;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.total-price {
+  color: #667eea;
+  font-size: 1rem;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border: none;
+  color: white;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #5a67d8, #6b46c1);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .service-actions {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .service-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .service-header-card {
+    padding: 1.5rem;
+    min-height: 100px;
+  }
+
+  .service-icon-container {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .service-card {
+    margin: 0;
+  }
+
+  .service-header-card {
+    padding: 1rem;
+    min-height: 80px;
+  }
+
+  .service-content {
+    padding: 1rem;
+  }
+}

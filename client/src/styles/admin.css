@@ -1,0 +1,1141 @@
+/* Admin-specific styles for Pet Care Management */
+
+/* Đảm bảo tất cả chữ trong bảng đều màu đen */
+table.min-w-full th,
+table.min-w-full td,
+table.min-w-full div,
+table.min-w-full p,
+table.min-w-full span {
+  color: #000000 !important;
+}
+
+/* Admin Dashboard */
+.admin-dashboard {
+  /* Nền tổng admin: chuyển sang tone cam nhạt ấm hơn */
+  background: linear-gradient(135deg, #fff7ed 0%, #fffbeb 50%, #fefce8 100%);
+  min-height: 100vh;
+}
+
+.admin-header {
+  /* Header admin: nền cam nhạt, chữ đậm dễ đọc */
+  background: linear-gradient(135deg, #fffbeb, #fed7aa);
+  color: #111827;
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.admin-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+.admin-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+  color: #111827;
+}
+
+.admin-subtitle {
+  opacity: 0.9;
+  font-size: 1rem;
+  margin: var(--spacing-xs) 0 0 0;
+  color: #4b5563;
+}
+
+.admin-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+/* Admin Stats Grid */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.admin-stat-card {
+  /* Thẻ thống kê: dùng cam nhạt thay cho tím đậm */
+  background: linear-gradient(135deg, #fff7ed, #ffedd5);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--secondary-200);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #fdba74, #fb923c);
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.admin-stat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.admin-stat-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--secondary-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.admin-stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fffbeb;
+  color: #ea580c;
+}
+
+.admin-stat-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--secondary-800);
+  line-height: 1;
+  margin-bottom: var(--spacing-sm);
+}
+
+.admin-stat-change {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.admin-stat-change.positive {
+  color: var(--accent-green);
+}
+
+.admin-stat-change.negative {
+  color: var(--accent-red);
+}
+
+.admin-stat-change.neutral {
+  color: var(--secondary-500);
+}
+
+/* Admin Tables */
+.admin-table-container {
+  /* Container bảng admin: nền cam rất nhạt, viền cam nhạt */
+  background: #fffbeb;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid #fed7aa;
+  overflow: hidden;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.admin-table-header {
+  background: linear-gradient(135deg, #fdba74, #fb923c);
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--secondary-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  color: #7c2d12;
+}
+
+.admin-table-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.admin-table-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th {
+  /* Header bảng admin: nền cam nhạt, chữ đậm */
+  background: #fed7aa;
+  padding: var(--spacing-md) var(--spacing-lg);
+  text-align: left;
+  font-weight: 600;
+  color: #7c2d12;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #fdba74;
+}
+
+.admin-table td {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid #fee2cc;
+  background: #fff7ed;
+  color: #111827;
+  font-size: 0.875rem;
+}
+
+.admin-table tbody tr {
+  transition: background-color var(--transition-fast);
+}
+
+.admin-table tbody tr:hover {
+  background: #ffedd5;
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Table Actions */
+.table-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+  align-items: center;
+}
+
+.table-action-btn {
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-sm);
+  color: var(--secondary-400);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-action-btn:hover {
+  background: var(--secondary-100);
+  color: var(--secondary-600);
+  transform: scale(1.1);
+}
+
+.table-action-btn.edit:hover {
+  background: #fdba74;
+  color: #7c2d12;
+}
+
+.table-action-btn.delete:hover {
+  background: #fee2e2;
+  color: var(--accent-red);
+}
+
+.table-action-btn.view:hover {
+  background: #d1fae5;
+  color: var(--accent-green);
+}
+
+/* Admin Forms */
+.admin-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.admin-form-header {
+  background: linear-gradient(135deg, #fffbeb, #fed7aa);
+  color: #111827;
+  padding: var(--spacing-xl);
+  text-align: center;
+}
+
+.admin-form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.admin-form-subtitle {
+  opacity: 0.9;
+  font-size: 0.875rem;
+}
+
+.admin-form-body {
+  padding: var(--spacing-2xl);
+}
+
+/* Admin Cards */
+.admin-card {
+  /* Card admin nền trắng hơi cam nhẹ cho đồng bộ */
+  background: #fffbeb;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--secondary-200);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  color: var(--secondary-800);
+}
+
+.admin-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.admin-card-header {
+  /* Header card: chuyển sang cam rất nhạt */
+  background: linear-gradient(135deg, #fffbeb, #ffe4c7);
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--secondary-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+/* Admin Appointments table cell text */
+.admin-appointments-cell-title {
+  color: #111827; /* gần tương đương text-slate-900 */
+}
+
+.admin-appointments-cell-subtitle {
+  color: #4b5563; /* gần tương đương text-slate-600 */
+}
+
+.admin-appointments-cell-highlight {
+  color: #4f46e5; /* indigo-600 */
+}
+
+.admin-card-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.admin-card-body {
+  padding: var(--spacing-lg);
+  color: #1f2937; /* Màu chữ tối hơn để dễ đọc */
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+}
+
+/* Đảm bảo tất cả chữ trong card đều dễ đọc */
+.admin-card-body p,
+.admin-card-body span,
+.admin-card-body div {
+  color: #1f2937;
+}
+
+/* Tăng độ tương phản cho các tiêu đề trong card */
+.admin-card-body h3,
+.admin-card-body h4,
+.admin-card-body h5 {
+  color: #111827;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+/* Điều chỉnh màu chữ cho các trạng thái */
+.admin-card-body .text-muted {
+  color: #6b7280 !important;
+}
+
+/* Điều chỉnh màu nền khi hover */
+.admin-card:hover .admin-card-body {
+  background-color: #f9fafb;
+}
+
+.card-description {
+  color: var(--secondary-600);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.admin-card-footer {
+  padding: var(--spacing-lg);
+  background: var(--secondary-100);
+  border-top: 1px solid var(--secondary-200);
+}
+
+/* Admin Filters */
+.admin-filters {
+  /* Bộ lọc admin mặc định: nền cam rất nhạt, viền cam nhạt */
+  background: #fff7ed;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid #fed7aa;
+  margin-bottom: var(--spacing-xl);
+  color: #000000; /* Đổi thành màu đen */
+}
+
+.admin-filters-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-lg);
+}
+
+.admin-filters-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #000000; /* Đổi thành màu đen */
+  margin: 0;
+}
+
+.admin-filters-toggle {
+  color: #000000; /* Đổi thành màu đen */
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+  opacity: 0.8;
+}
+
+.admin-filters-toggle:hover {
+  opacity: 1;
+}
+
+.admin-filters-toggle:hover {
+  color: var(--secondary-700);
+}
+
+.admin-filters-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.admin-filters-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: flex-end;
+  color: #000000; /* Đảm bảo chữ trong actions cũng màu đen */
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--secondary-200);
+}
+
+/* Admin Appointments Tabs */
+.admin-appointments-tabs-wrapper {
+  margin-top: 1.5rem; /* tương đương mt-6 */
+  padding: 0.25rem; /* p-1 */
+  border-radius: 1rem; /* rounded-2xl */
+  /* Wrapper tabs lịch hẹn: chuyển sang cam nhạt, nhẹ mắt hơn */
+  background: radial-gradient(circle at top left, rgba(251, 146, 60, 0.3), transparent 55%),
+              radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.35), transparent 55%),
+              #fff7ed;
+  border: 1px solid rgba(248, 171, 94, 0.8);
+  box-shadow:
+    0 16px 35px rgba(248, 171, 94, 0.35),
+    0 0 0 1px rgba(248, 171, 94, 0.25);
+}
+
+/* Admin Appointments intro text */
+.admin-appointments-intro {
+  max-width: 40rem;
+  margin-top: 0.5rem;
+  color: #4b5563;
+}
+
+/* Admin Appointments tabs */
+.admin-appointments-tab {
+  flex: 1;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  background: transparent;
+  color: #7c2d12;
+}
+
+.admin-appointments-tab-active {
+  background: linear-gradient(135deg, #fed7aa, #fb923c);
+  color: #7c2d12;
+  box-shadow: 0 10px 25px rgba(248, 171, 94, 0.45);
+}
+
+.admin-appointments-tab-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.admin-appointments-tab-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  background: rgba(248, 171, 94, 0.15);
+  color: #c2410c;
+}
+
+.admin-appointments-tab-badge.active {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Admin Appointments table */
+.admin-appointments-table-container {
+  min-height: 400px;
+  color: black;
+  overflow-x: auto;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 1rem; /* rounded-2xl */
+  border: 1px solid #fed7aa; /* viền cam nhạt */
+  box-shadow:
+    0 20px 40px -12px rgba(248, 171, 94, 0.35),
+    0 10px 25px rgba(248, 171, 94, 0.25);
+}
+
+.admin-appointments-table {
+  width: 100%;
+  min-width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-appointments-table-head {
+  /* Header bảng: nền cam, chữ đậm cho dễ đọc */
+  color: #111827;
+  background-image: linear-gradient(to right, #fdba74, #fb923c);
+}
+
+.admin-appointments-th {
+  padding: 1rem 1.5rem; /* px-6 py-4 */
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Header bảng lịch hẹn chuẩn (appointments tab) */
+.admin-appointments-th-header {
+  padding: 1rem 1.5rem; /* px-6 py-4 */
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #111827; /* chữ đậm, dễ đọc hơn trên nền gradient */
+  white-space: nowrap;
+}
+
+.admin-appointments-th-header--customer {
+  width: 16.66%; /* ~2/12 */
+}
+
+.admin-appointments-th-header--service {
+  width: 25%; /* ~3/12 */
+}
+
+.admin-appointments-th-header--date {
+  width: 16.66%;
+}
+
+.admin-appointments-th-header--employee {
+  width: 25%;
+}
+
+.admin-appointments-th-header--status {
+  width: 16.66%;
+}
+
+.admin-appointments-table-body {
+  background: #ffffff;
+}
+
+.admin-appointments-table-body tr {
+  border-bottom: 1px solid #e5e7eb; /* divide-slate-100 */
+}
+
+.admin-appointments-table-body tr:last-child {
+  border-bottom: none;
+}
+
+.admin-appointments-table-body tr:hover {
+  background: #fffbeb; /* hover cam rất nhạt */
+  transition: background-color 0.2s ease;
+}
+
+/* Admin status badge (trạng thái lịch hẹn / yêu cầu) */
+.admin-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem; /* px-2.5 py-0.5 */
+  border-radius: 9999px;
+  font-size: 0.75rem; /* text-xs */
+  font-weight: 600;
+  gap: 0.25rem;
+}
+
+.admin-status-badge-text {
+  margin-left: 0.25rem;
+}
+
+.admin-status-badge--pending,
+.admin-status-badge--pending-employee {
+  background-color: #fef3c7; /* bg-yellow-100 */
+  color: #92400e; /* text-yellow-800 */
+}
+
+.admin-status-badge--confirmed {
+  background-color: #dbeafe; /* bg-blue-100 */
+  color: #1d4ed8; /* text-blue-700/800 */
+}
+
+.admin-status-badge--completed {
+  background-color: #dcfce7; /* bg-green-100 */
+  color: #166534; /* text-green-700/800 */
+}
+
+.admin-status-badge--cancelled {
+  background-color: #fee2e2; /* bg-red-100 */
+  color: #b91c1c; /* text-red-700/800 */
+}
+
+.admin-status-badge--unknown {
+  background-color: #e5e7eb; /* bg-gray-200 */
+  color: #374151; /* text-gray-700 */
+}
+
+/* Hàng bảng service-requests */
+.admin-appointments-row {
+  transition: background-color 0.2s ease;
+}
+
+.admin-appointments-row:hover {
+  background: #fffbeb;
+}
+
+/* Admin Appointments pagination */
+.admin-appointments-pagination-bar {
+  background: rgba(255, 255, 255, 0.96);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #fed7aa;
+  border-radius: 0 0 1rem 1rem; /* rounded-b-2xl */
+  margin-top: 1rem;
+}
+
+/* Admin Appointments filters */
+.admin-appointments-filters {
+  margin-bottom: 2rem; /* mb-8 */
+  padding: 1.5rem; /* p-6 */
+  border-radius: 1rem; /* rounded-2xl */
+  background: #fff7ed; /* cam rất nhạt */
+  border: 1px solid #fed7aa;
+  box-shadow:
+    0 20px 40px -12px rgba(248, 171, 94, 0.35),
+    0 10px 25px rgba(248, 171, 94, 0.25);
+}
+
+.admin-appointments-filters-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem; /* gap-4 */
+}
+
+@media (min-width: 768px) {
+  .admin-appointments-filters-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .admin-appointments-filters-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* lg:grid-cols-4 */
+  }
+}
+
+.admin-appointments-filters-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.admin-appointments-filters-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #7c2d12; /* text cam đậm nhẹ */
+}
+
+.admin-appointments-filters-input {
+  width: 100%;
+  border-radius: 0.75rem; /* rounded-xl */
+  border: 1px solid #fed7aa; /* cam nhạt */
+  background: #fff7ed;
+  color: #7c2d12;
+  font-size: 0.875rem;
+  padding: 0.55rem 0.85rem;
+  box-shadow: 0 1px 2px rgba(248, 171, 94, 0.4);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.admin-appointments-filters-input::placeholder {
+  color: #9ca3af;
+}
+
+.admin-appointments-filters-input:focus {
+  outline: none;
+  border-color: #fb923c;
+  box-shadow: 0 0 0 2px rgba(248, 171, 94, 0.6);
+  background: #fffbeb;
+}
+
+.admin-appointments-filters-input--search {
+  padding-left: 2.75rem; /* pl-11 */
+}
+
+.admin-appointments-filters-search {
+  position: relative;
+}
+
+.admin-appointments-filters-search-icon {
+  position: absolute;
+  inset-block: 0;
+  left: 0.75rem;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.admin-appointments-filters-search-icon-svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #fb923c; /* cam tươi vừa phải */
+}
+
+.admin-appointments-filters-footer {
+  margin-top: 1.5rem; /* mt-6 */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .admin-appointments-filters-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.admin-filters-content .form-group {
+  color: #000000;
+}
+
+.admin-appointments-filters-reset-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(129, 140, 248, 0.4);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #c7d2fe; /* text-indigo-200 */
+  background: rgba(99, 102, 241, 0.1);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.6);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-appointments-filters-reset-btn:hover {
+  background: rgba(99, 102, 241, 0.2);
+}
+
+.admin-appointments-filters-reset-btn:focus-visible {
+  outline: 2px solid rgba(129, 140, 248, 0.6);
+  outline-offset: 2px;
+}
+
+.admin-appointments-filters-reset-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.admin-appointments-filters-result-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #7c2d12;
+}
+
+/* Bộ lọc yêu cầu dịch vụ trong AdminAppointments (thay cho bg-white p-4 rounded-lg shadow mb-6) */
+.admin-requests-filters {
+  background: #fff7ed;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #fed7aa;
+  box-shadow: var(--shadow-md);
+  color: #111827;
+}
+
+/* Empty state / error state trong AdminAppointments (thay cho text-center py-10) */
+.admin-empty-state {
+  text-align: center;
+  padding: 2.5rem 0;
+  color: #111827;
+}
+
+.admin-empty-state h3,
+.admin-empty-state p {
+  color: #111827;
+}
+
+/* Admin Charts */
+.admin-chart-container {
+  /* Vùng biểu đồ: nền cam rất nhạt, viền cam nhạt cho đồng bộ */
+  background: linear-gradient(135deg, #fffbeb, #fff7ed);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid #fed7aa;
+  margin-bottom: var(--spacing-xl);
+}
+
+.admin-chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-lg);
+}
+
+.admin-chart-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--secondary-800);
+  margin: 0;
+}
+
+.admin-chart-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.admin-chart-content {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fffbeb;
+  border-radius: var(--radius-lg);
+  color: #9a3412;
+  font-style: italic;
+}
+
+/* Admin Notifications */
+.admin-notifications {
+  position: fixed;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  z-index: 1000;
+  max-width: 400px;
+}
+
+.admin-notification {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-lg);
+  border-left: 4px solid var(--primary-500);
+  margin-bottom: var(--spacing-sm);
+  animation: slideInRight var(--transition-normal) ease-out;
+}
+
+.admin-notification.success {
+  border-left-color: var(--accent-green);
+}
+
+.admin-notification.error {
+  border-left-color: var(--accent-red);
+}
+
+.admin-notification.warning {
+  border-left-color: var(--accent-yellow);
+}
+
+.admin-notification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xs);
+}
+
+.admin-notification-title {
+  font-weight: 600;
+  color: var(--secondary-800);
+  font-size: 0.875rem;
+}
+
+.admin-notification-close {
+  color: var(--secondary-400);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.admin-notification-close:hover {
+  color: var(--secondary-600);
+}
+
+.admin-notification-message {
+  color: var(--secondary-600);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+/* Admin Sidebar */
+.admin-sidebar {
+  /* Sidebar admin: gradient cam nhạt tránh tối màu quá */
+  background: linear-gradient(180deg, #fed7aa 0%, #fdba74 40%, #ffedd5 100%);
+  border-right: 1px solid var(--secondary-200);
+  box-shadow: var(--shadow-lg);
+  min-height: 100vh;
+}
+
+.admin-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--secondary-200);
+  background: linear-gradient(135deg, #fdba74, #fb923c);
+  color: var(--secondary-800);
+  text-decoration: none;
+}
+
+.admin-sidebar-brand-icon {
+  width: 32px;
+  height: 32px;
+  color: #7c2d12;
+}
+
+.admin-sidebar-brand-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.admin-sidebar-nav {
+  padding: var(--spacing-md);
+}
+
+.admin-sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+  border-radius: var(--radius-md);
+  color: #7c2d12;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all var(--transition-normal);
+}
+
+.admin-sidebar-nav-item:hover {
+  background: #fffbeb;
+  color: #7c2d12;
+  transform: translateX(4px);
+}
+
+.admin-sidebar-nav-item.active {
+  background: linear-gradient(135deg, #fed7aa, #fdba74);
+  color: #7c2d12;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Buttons trong khu admin: dùng tone cam thay vì xanh đậm */
+.admin-dashboard .btn-primary,
+.admin-form-container .btn-primary,
+.admin-appointments-filters .btn-primary,
+.admin-chart-container .btn-primary {
+  background: linear-gradient(135deg, #fb923c, #ea580c);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(248, 171, 94, 0.45);
+}
+
+.admin-dashboard .btn-primary:hover:not(:disabled),
+.admin-form-container .btn-primary:hover:not(:disabled),
+.admin-appointments-filters .btn-primary:hover:not(:disabled),
+.admin-chart-container .btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ea580c, #c2410c);
+}
+
+/* Btn primary nhỏ trong các header admin (ví dụ AdminCustomers) */
+.admin-dashboard .btn-primary.btn-sm,
+.page-header .btn-primary.btn-sm,
+.admin-table-header .btn-primary.btn-sm {
+  background: linear-gradient(135deg, #fb923c, #ea580c) !important;
+  color: #ffffff !important;
+  box-shadow: 0 3px 8px rgba(248, 171, 94, 0.5);
+}
+
+.admin-dashboard .btn-primary.btn-sm:hover:not(:disabled),
+.page-header .btn-primary.btn-sm:hover:not(:disabled),
+.admin-table-header .btn-primary.btn-sm:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ea580c, #c2410c) !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .admin-stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .admin-table-container {
+    overflow-x: auto;
+  }
+  
+  .admin-table {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-filters-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-filters-actions {
+    flex-direction: column;
+  }
+  
+  .admin-filters-actions .btn {
+    width: 100%;
+  }
+  
+  .admin-notifications {
+    left: var(--spacing-sm);
+    right: var(--spacing-sm);
+    max-width: none;
+  }
+  
+  .admin-table-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .admin-table-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* Ensure modal centering on all browsers */
+.modal-overlay {
+  animation: fadeIn 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(17, 24, 39, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+}
+
+.modal-content {
+  animation: slideInScale 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  margin: 0 auto;
+  max-height: 95vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  transform: translateZ(0); /* Force hardware acceleration */
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: auto;
+  max-width: 80vw;
+}
+
+@keyframes slideInScale {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/* Modal responsive */
+@media (max-width: 768px) {
+  .modal-overlay {
+    background: rgba(17, 24, 39, 0.7);
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+  }
+
+  .modal-content {
+    width: 100%;
+    max-width: none;
+    border-radius: 1rem 1rem 0 0;
+    max-height: 90vh;
+    margin: 0 auto;
+    flex-shrink: 0;
+  }
+
+  .admin-service-modal .modal-header {
+    padding: 1rem;
+  }
+
+  .admin-service-modal .modal-body {
+    padding: 1rem;
+  }
+}

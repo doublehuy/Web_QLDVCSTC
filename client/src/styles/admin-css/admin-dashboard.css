@@ -1,0 +1,273 @@
+/* Moved from styles/admin-dashboard.css */
+
+/* Admin Dashboard specific styles - copied from admin.css so AdminDashboard can import its own CSS */
+
+/* Admin Dashboard layout */
+.admin-dashboard {
+  background: linear-gradient(135deg, #fff7ed 0%, #fffbeb 50%, #fefce8 100%);
+  min-height: 100vh;
+}
+
+.admin-header {
+  background: linear-gradient(135deg, #fffbeb, #fed7aa);
+  color: #111827;
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.admin-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+.admin-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+  color: #111827;
+}
+
+.admin-subtitle {
+  opacity: 0.9;
+  font-size: 1rem;
+  margin: var(--spacing-xs) 0 0 0;
+  color: #4b5563;
+}
+
+.admin-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+/* Admin Stats Grid */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.admin-stat-card {
+  background: linear-gradient(135deg, #fff7ed, #ffedd5);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--secondary-200);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #fdba74, #fb923c);
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.admin-stat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.admin-stat-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4b5563; /* text-gray-600 */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.admin-stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fffbeb;
+  color: #ea580c;
+}
+
+.admin-stat-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827; /* text-gray-900 */
+  line-height: 1;
+  margin-bottom: var(--spacing-sm);
+}
+
+.admin-stat-change {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.admin-stat-change.positive {
+  color: var(--accent-green);
+}
+
+.admin-stat-change.negative {
+  color: var(--accent-red);
+}
+
+.admin-stat-change.neutral {
+  color: #4b5563; /* text-gray-600 */
+}
+
+/* Admin cards & content grid shared by dashboard */
+.admin-card {
+  background: #fffbeb;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--secondary-200);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  color: var(--secondary-800);
+}
+
+.admin-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.admin-card-header {
+  background: linear-gradient(135deg, #fffbeb, #ffe4c7);
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--secondary-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.admin-card-body {
+  padding: var(--spacing-lg);
+  color: #1f2937;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+}
+
+.card-description {
+  color: var(--secondary-600);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Empty state block reused in dashboard */
+.admin-empty-state {
+  text-align: center;
+  padding: 2.5rem 0;
+  color: #111827;
+}
+
+.admin-empty-state h3,
+.admin-empty-state p {
+  color: #111827;
+}
+
+/* Admin chart block used at bottom of dashboard */
+.admin-chart-container {
+  background: linear-gradient(135deg, #fffbeb, #fff7ed);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid #fed7aa;
+  margin-bottom: var(--spacing-xl);
+}
+
+.admin-chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-lg);
+}
+
+.admin-chart-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--secondary-800);
+  margin: 0;
+}
+
+.admin-chart-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.admin-chart-content {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fffbeb;
+  border-radius: var(--radius-lg);
+  color: #9a3412;
+  font-style: italic;
+}
+
+/* Buttons tone for dashboard */
+.admin-dashboard .btn-primary {
+  background: linear-gradient(135deg, #fb923c, #ea580c);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(248, 171, 94, 0.45);
+}
+
+.admin-dashboard .btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ea580c, #c2410c);
+}
+
+/* Small primary buttons often used in dashboard cards */
+.admin-dashboard .btn-primary.btn-sm {
+  background: linear-gradient(135deg, #fb923c, #ea580c) !important;
+  color: #ffffff !important;
+  box-shadow: 0 3px 8px rgba(248, 171, 94, 0.5);
+}
+
+.admin-dashboard .btn-primary.btn-sm:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ea580c, #c2410c) !important;
+}
+
+/* Responsive tweaks for dashboard */
+@media (max-width: 1024px) {
+  .admin-stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

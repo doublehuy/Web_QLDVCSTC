@@ -1,0 +1,16 @@
+{
+  "name": "PetCare Admin",
+  "short_name": "PetCare Admin",
+  "description": "Hệ thống quản lý phòng khám thú y",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

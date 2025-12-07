@@ -1,0 +1,190 @@
+/* Moved from styles/admin-services.css */
+
+/* Enhanced Admin Service Form - moved from admin.css to be specific for AdminServices page */
+
+.admin-service-form .form-input,
+.admin-service-form .form-select,
+.admin-service-form .form-textarea {
+  background: #ffffff;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+  color: #0f172a;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 16px 20px;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.admin-service-form .form-input:focus,
+.admin-service-form .form-select:focus,
+.admin-service-form .form-textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15), 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+.admin-service-form .form-input::placeholder,
+.admin-service-form .form-select::placeholder,
+.admin-service-form .form-textarea::placeholder {
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.admin-service-form .form-label {
+  color: #1f2937;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.admin-service-form .form-group {
+  margin-bottom: 32px;
+}
+
+/* Enhanced modal styling specific to AdminServices */
+.admin-service-modal .modal-content {
+  background: #ffffff;
+  color: #0f172a;
+  border: none;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.admin-service-modal .modal-header {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed, #2563eb);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-service-modal .modal-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.admin-service-modal .modal-body {
+  background: #ffffff;
+  color: #0f172a;
+  padding: 32px;
+}
+
+/* Form validation states */
+.admin-service-form .form-input:invalid,
+.admin-service-form .form-select:invalid {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.admin-service-form .form-input:invalid:focus,
+.admin-service-form .form-select:invalid:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.admin-service-form .form-input:valid,
+.admin-service-form .form-select:valid {
+  border-color: #10b981;
+}
+
+/* Enhanced currency input */
+.price-input-container {
+  position: relative;
+}
+
+.price-input-container .currency-symbol {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-weight: 700;
+  font-size: 1.25rem;
+  z-index: 2;
+}
+
+.price-input-container .form-input {
+  padding-left: 60px;
+}
+
+/* Enhanced category select */
+.category-select {
+  background: #ffffff;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+  color: #0f172a;
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 16px 20px;
+  cursor: pointer;
+}
+
+.category-select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+/* Enhanced buttons within AdminServices form */
+.admin-service-form .btn {
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 16px 32px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.admin-service-form .btn-primary {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+
+.admin-service-form .btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #4338ca, #6d28d9);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+}
+
+.admin-service-form .btn-outline {
+  background: transparent;
+  color: #4b5563;
+  border: 2px solid #d1d5db;
+}
+
+.admin-service-form .btn-outline:hover:not(:disabled) {
+  background: #f9fafb;
+  color: #1f2937;
+  border-color: #9ca3af;
+  transform: translateY(-1px);
+}
+
+/* Enhanced loading spinner for AdminServices */
+.admin-service-form .spinner-sm {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: admin-service-spin 1s linear infinite;
+}
+
+@keyframes admin-service-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

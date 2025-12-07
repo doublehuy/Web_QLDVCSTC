@@ -1,0 +1,41 @@
+{
+  "name": "pet-care-management-system",
+  "version": "1.0.0",
+  "description": "Hệ thống quản lý dịch vụ chăm sóc thú cưng",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "keywords": [
+    "pet-care",
+    "management",
+    "PERN",
+    "React",
+    "Node.js",
+    "PostgreSQL"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.8.0",
+    "@headlessui/react": "^2.2.9",
+    "@mui/x-date-pickers": "^8.16.0",
+    "antd": "^4.24.8",
+    "axios": "^1.13.2",
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.2",
+    "date-fns": "^4.1.0",
+    "dotenv": "^17.2.3",
+    "lucide-react": "^0.552.0",
+    "pg": "^8.16.3",
+    "react-datepicker": "^8.8.0",
+    "react-icons": "^5.5.0"
+  }
+}
